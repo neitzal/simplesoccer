@@ -5,12 +5,10 @@ This repository contains a simple soccer environment intended for reinforcement 
 The environment can be run entirely on GPU, and achieves millions of steps per second on a single device.
 
 It can be used as a single-agent environment using a fixed policy for the opponent team, or as a multi-agent environment for self-play RL.
-  
-![Trained policy](videos/trained_a.gif)
-![Trained policy](videos/trained_b.gif)
-![Trained policy](videos/trained_c.gif)
-![Trained policy](videos/trained_d.gif)
+ 
+<img src="videos/trained_a.gif" width="200" /> <img src="videos/trained_b.gif" width="200" /> 
 
+<img src="videos/trained_c.gif" width="200" />  <img src="videos/trained_d.gif" width="200" /> 
 
 
 The environment is kept as simple as possible, and does not contain engineered feature transformations or shaped rewards.
@@ -26,13 +24,13 @@ Visual observations or 1D-LIDAR have not been implemented yet.
 
 ## Action space
 *Move*:  
-![Move](videos/action_move.gif)
+<img src="videos/action_move.gif" width="200" />
 
 *Dash*:  
-![Dash](videos/action_dash.gif)
+<img src="videos/action_dash.gif" width="200" />
 
 *Kick*:  
-![Kick](videos/action_kick.gif)
+<img src="videos/action_kick.gif" width="200" />
 
 
 Players of each team can take independent actions.
@@ -58,16 +56,16 @@ Until batch sizes of more than 10k, the number of steps per second increases rou
 with the batch size, indicating that the parallelization is "free" up to that point.
 At batch sizes of >100k, more than 10M steps per second are reached.
 Note that this analysis does not include agent inference (i.e. querying a neural network). 
-Depending on the implementation, the full RL loop can still achieve several millions of steps per second.
-![Number of parallel environments vs steps per second](img/n_envs_vs_sps.png)
+Depending on the implementation, the full RL loop can still achieve several millions of steps per second.  
+<img src="img/n_envs_vs_sps.png" width="300" />
 
 
 ## RL training
 For strong RL training performance, it is important to make sure that the actions and observations stay on the GPU after stepping the environment and training the agent.
 Some RL frameworks do not support this natively, but can typically easily be tweaked to avoid forcing the relevant tensors to the CPU.
 The following is a training curve of an A2C agent against the policy `HandcraftedPolicy` (in `simplesoccer.policies.handcrafted_policy`), 
-trained using stable-baselines3 with the aforementioned tweak.
-![Plot of episode returns of A2C agent](img/return-curve.png)
+trained using stable-baselines3 with the aforementioned tweak.  
+<img src="img/return-curve.png" width="500" />
 
 
 ### Discount factor
