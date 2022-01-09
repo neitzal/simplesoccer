@@ -57,7 +57,8 @@ This experiment (found in `examples/profile_env.py`) shows the batch scaling per
 Until batch sizes of more than 10k, the number of steps per second increases roughly linearly
 with the batch size, indicating that the parallelization is "free" up to that point.
 At batch sizes of >100k, more than 10M steps per second are reached.
-Note that this analysis does not include agent inference (i.e. querying a neural network).
+Note that this analysis does not include agent inference (i.e. querying a neural network). 
+Depending on the implementation, the full RL loop can still achieve several millions of steps per second.
 ![Number of parallel environments vs steps per second](img/n_envs_vs_sps.png)
 
 
