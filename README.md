@@ -72,7 +72,7 @@ trained using stable-baselines3 with the aforementioned tweak.
 
 ### Discount factor
 The discount factor has an important influence on the types of behaviors one observes.
-Here we visualize trained policies with discount factors of 0.995 and 1.0, respectively.
+Here we visualize trained policies with discount factors of 0.995 and 1.0, respectively.  
 ![Discount factor 0.995](videos/discount_0995.gif)
 
 ![Discount factor 1.0](videos/discount_1.gif)
