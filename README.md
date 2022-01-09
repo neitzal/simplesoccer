@@ -1,5 +1,5 @@
 
-# SimpleSoccer
+# SimpleSoccer: Superfast self-play RL environment
 
 This repository contains a simple soccer environment intended for reinforcement learning (RL) research.
 The environment can be run entirely on GPU, and achieves millions of steps per second on a single device.
@@ -16,7 +16,7 @@ It can be used as a single-agent environment using a fixed policy for the oppone
 The environment is kept as simple as possible, and does not contain engineered feature transformations or shaped rewards.
 Observations consists of object coordinates and velocities, making the environment fully observed.
 
-Visual observations or 1D Lidar have not been implemented yet. 
+Visual observations or 1D-LIDAR have not been implemented yet. 
 
 ## Features
 - Fast batched simulation, for fast RL loops entirely on GPU
